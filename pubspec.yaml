@@ -45,6 +45,9 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+  assets:
+    - assets/img/stories_list/mountain.jpg
+
   fonts:
     - family: OpenSans
       fonts:
