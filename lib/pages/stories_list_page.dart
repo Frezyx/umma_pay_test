@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:umma_pay_test/blocs/time_selector_panel_bloc.dart';
 import 'package:umma_pay_test/design/theme.dart';
 import 'package:umma_pay_test/widgets/app_bars/stories_list_app_bar.dart';
 import 'package:umma_pay_test/widgets/custom/seporator.dart';
@@ -8,6 +10,7 @@ import 'package:umma_pay_test/widgets/time_selector_panel/time_selector_panel.da
 class StoriesListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final timeSelectorPanelbloc = Provider.of<TimeSelectorPanelBloc>(context);
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: buildStoriesListAppBar(context),
@@ -29,7 +32,7 @@ class StoriesListPage extends StatelessWidget {
                   ],
                 ),
                 TimeSelectorPanel(
-                  selectedIndex: 1,
+                  bloc: timeSelectorPanelbloc,
                   titleList: ["07:12", "12:43", "15:29", "18:11", "19:53"],
                   mainColor: DesignTheme.colors.main,
                   secondaryColor: DesignTheme.colors.darkBlue,
