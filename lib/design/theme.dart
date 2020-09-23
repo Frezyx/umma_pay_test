@@ -11,6 +11,7 @@ class DesignTheme {
   static final ThemeData appTheme = ThemeData(
     fontFamily: 'Open Sans',
     primarySwatch: Colors.green,
+    backgroundColor: Colors.white,
     visualDensity: VisualDensity.adaptivePlatformDensity,
   );
 }

@@ -18,4 +18,14 @@ class DesignThemeText {
     fontSize: 12,
     color: DesignTheme.colors.main,
   );
+  final TextStyle toolbarCityLabel = TextStyle(
+    fontWeight: FontWeight.w700,
+    fontSize: 15,
+    color: DesignTheme.colors.main,
+  );
+  final TextStyle timeSelectorPanelItem = TextStyle(
+    fontWeight: FontWeight.w600,
+    fontSize: 12,
+    color: DesignTheme.colors.main,
+  );
 }

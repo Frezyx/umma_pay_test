@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:umma_pay_test/design/theme.dart';
+import 'package:umma_pay_test/widgets/custom/seporator.dart';
 
 class StoriesListItem extends StatelessWidget {
   const StoriesListItem({
@@ -12,7 +13,7 @@ class StoriesListItem extends StatelessWidget {
       onTap: () => print("open"),
       child: Column(
         children: [
-          _buildSeporator(),
+          Seporator(),
           Container(
             height: 120,
             width: MediaQuery.of(context).size.width,
@@ -60,13 +61,6 @@ class StoriesListItem extends StatelessWidget {
           ],
         ),
       ],
-    );
-  }
-
-  Container _buildSeporator() {
-    return Container(
-      height: 1,
-      color: DesignTheme.colors.grayLightest,
     );
   }
 }
