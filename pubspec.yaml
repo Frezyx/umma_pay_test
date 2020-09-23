@@ -23,6 +23,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_staggered_animations: ^0.1.2
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -43,6 +44,20 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+
+  fonts:
+    - family: OpenSans
+      fonts:
+        - asset: assets/fonts/OpenSans-SemiBoldItalic.ttf
+        - asset: assets/fonts/OpenSans-SemiBold.ttf
+        - asset: assets/fonts/OpenSans-BoldItalic.ttf
+        - asset: assets/fonts/OpenSans-Bold.ttf
+        - asset: assets/fonts/OpenSans-Light.ttf
+        - asset: assets/fonts/OpenSans-LightItalic.ttf
+        - asset: assets/fonts/OpenSans-ExtraBold.ttf
+        - asset: assets/fonts/OpenSans-ExtraBoldItalic.ttf
+        - asset: assets/fonts/OpenSans-Regular.ttf
+        - asset: assets/fonts/OpenSans-Italic.ttf
 
   # To add assets to your application, add an assets section, like this:
   # assets:
