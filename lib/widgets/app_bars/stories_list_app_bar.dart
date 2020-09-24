@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:umma_pay_test/blocs/stories_list_bloc.dart';
 import 'package:umma_pay_test/design/theme.dart';
 
-AppBar buildStoriesListAppBar(BuildContext context) {
+AppBar buildStoriesListAppBar(StoriesListPageBloc bloc, BuildContext context) {
   return AppBar(
     backgroundColor: Colors.white,
     elevation: 0,
@@ -12,7 +13,7 @@ AppBar buildStoriesListAppBar(BuildContext context) {
     ),
     leading: IconButton(
       icon: Icon(Icons.arrow_back_ios),
-      onPressed: () => Navigator.pop(context),
+      onPressed: () => bloc.openBackPage(),
       color: DesignTheme.colors.main,
     ),
     actions: [

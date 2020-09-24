@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:umma_pay_test/blocs/stories_list_bloc.dart';
 import 'package:umma_pay_test/design/theme.dart';
+import 'package:umma_pay_test/utils/enums.dart';
 import 'package:umma_pay_test/widgets/custom/seporator.dart';
 
 class StoriesListItem extends StatelessWidget {
@@ -9,8 +12,9 @@ class StoriesListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final storiesListPageBloc = Provider.of<StoriesListPageBloc>(context);
     return GestureDetector(
-      onTap: () => print("open"),
+      onTap: () => storiesListPageBloc.openPage(StoryPages.About),
       child: Column(
         children: [
           Seporator(),

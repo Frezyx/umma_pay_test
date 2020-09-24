@@ -48,6 +48,7 @@ flutter:
 
   assets:
     - assets/img/stories_list/mountain.jpg
+    - assets/img/story/story.jpg
 
   fonts:
     - family: OpenSans
