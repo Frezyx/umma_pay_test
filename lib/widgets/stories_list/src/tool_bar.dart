@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:umma_pay_test/blocs/stories_list_bloc.dart';
 import 'package:umma_pay_test/data/test/test_data_loaders.dart';
 import 'package:umma_pay_test/design/theme.dart';
+import 'package:umma_pay_test/widgets/custom/city_button.dart';
 import 'package:umma_pay_test/widgets/time_selector_panel/time_selector_panel.dart';
-
-import '../../custom/custom_icons.dart';
 
 class StoriesListToolBar extends StatelessWidget {
   const StoriesListToolBar({
@@ -21,18 +20,7 @@ class StoriesListToolBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Row(
-            children: [
-              Icon(
-                CustomIcons.location_outline,
-                color: DesignTheme.colors.main,
-              ),
-              Text(
-                TestData.selectedCity,
-                style: DesignTheme.text.toolbarCityLabel,
-              ),
-            ],
-          ),
+          CityButton(),
           TimeSelectorPanel(
             bloc: storiesListPageBloc,
             titleList: TestData.timesList,
