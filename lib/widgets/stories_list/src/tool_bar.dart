@@ -3,6 +3,8 @@ import 'package:umma_pay_test/blocs/stories_list_bloc.dart';
 import 'package:umma_pay_test/design/theme.dart';
 import 'package:umma_pay_test/widgets/time_selector_panel/time_selector_panel.dart';
 
+import '../../../custom_icons.dart';
+
 class StoriesListToolBar extends StatelessWidget {
   const StoriesListToolBar({
     Key key,
@@ -20,7 +22,10 @@ class StoriesListToolBar extends StatelessWidget {
         children: [
           Row(
             children: [
-              Icon(Icons.location_on, color: DesignTheme.colors.main),
+              Icon(
+                CustomIcons.location_outline,
+                color: DesignTheme.colors.main,
+              ),
               Text(
                 "Москва",
                 style: DesignTheme.text.toolbarCityLabel,

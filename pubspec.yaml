@@ -63,6 +63,11 @@ flutter:
         - asset: assets/fonts/OpenSans-ExtraBoldItalic.ttf
         - asset: assets/fonts/OpenSans-Regular.ttf
         - asset: assets/fonts/OpenSans-Italic.ttf
+# flutter:
+#   fonts:
+    - family:  location_outline
+      fonts:
+        - asset: assets/fonts/location_outline.ttf
 
   # To add assets to your application, add an assets section, like this:
   # assets:
