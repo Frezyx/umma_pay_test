@@ -48,6 +48,9 @@ flutter:
 
   assets:
     - assets/img/stories_list/mountain.jpg
+    - assets/img/stories_list/mountain1.jpg
+    - assets/img/stories_list/thoughts.jpg
+    - assets/img/stories_list/temple.jpg
     - assets/img/story/story.jpg
 
   fonts:

@@ -2,13 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:umma_pay_test/blocs/stories_list_bloc.dart';
 import 'package:umma_pay_test/design/theme.dart';
+import 'package:umma_pay_test/models/story.dart';
 import 'package:umma_pay_test/utils/enums.dart';
 import 'package:umma_pay_test/widgets/custom/seporator.dart';
 
 class StoriesListItem extends StatelessWidget {
   const StoriesListItem({
     Key key,
+    @required this.story,
   }) : super(key: key);
+
+  final Story story;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +32,7 @@ class StoriesListItem extends StatelessWidget {
               boxShadow: DesignTheme.shadows.box,
               image: DecorationImage(
                 image: AssetImage(
-                  "assets/img/stories_list/mountain.jpg",
+                  story.photoPath,
                 ),
                 fit: BoxFit.cover,
               ),
@@ -46,7 +50,7 @@ class StoriesListItem extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         Text(
-          "Утром",
+          story.title,
           style: DesignTheme.text.storyListLabel,
         ),
         SizedBox(height: 4),
