@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
-import 'package:umma_pay_test/widgets/stories_list/src/stories_list_item.dart';
+import 'package:umma_pay_test/data/test/test_data_loaders.dart';
 import 'package:umma_pay_test/widgets/story_screen/src/story_list_item.dart';
 
 class StoryListBuilder extends StatelessWidget {
@@ -10,11 +10,12 @@ class StoryListBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final storyList = TestData.getStoryList();
     return Expanded(
       child: AnimationLimiter(
         child: ListView.builder(
           padding: EdgeInsets.all(0),
-          itemCount: 2,
+          itemCount: storyList.length,
           itemBuilder: (BuildContext context, int i) {
             return AnimationConfiguration.staggeredList(
               position: i,
@@ -22,7 +23,7 @@ class StoryListBuilder extends StatelessWidget {
               child: SlideAnimation(
                 verticalOffset: 50.0,
                 child: FadeInAnimation(
-                  child: StoryListItem(),
+                  child: StoryListItem(story: storyList[i]),
                 ),
               ),
             );

@@ -38,4 +38,10 @@ class DesignThemeText {
     fontSize: 17,
     color: DesignTheme.colors.grayLabel,
   );
+
+  final TextStyle storyDescription = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 15,
+    color: DesignTheme.colors.grayMidle,
+  );
 }
