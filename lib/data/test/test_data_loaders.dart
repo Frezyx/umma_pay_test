@@ -1,6 +1,18 @@
 import 'package:umma_pay_test/models/story.dart';
 
 class TestData {
+  static const String appBarTitle = "Азкары";
+
+  static const String selectedCity = "Москва";
+
+  static const List<String> timesList = [
+    "07:12",
+    "12:43",
+    "15:29",
+    "18:11",
+    "19:53",
+  ];
+
   static final Story testStory = Story(
     title: "Утренний азкар №1",
     description:

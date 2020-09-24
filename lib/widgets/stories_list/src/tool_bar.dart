@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:umma_pay_test/blocs/stories_list_bloc.dart';
+import 'package:umma_pay_test/data/test/test_data_loaders.dart';
 import 'package:umma_pay_test/design/theme.dart';
 import 'package:umma_pay_test/widgets/time_selector_panel/time_selector_panel.dart';
 
-import '../../../custom_icons.dart';
+import '../../custom/custom_icons.dart';
 
 class StoriesListToolBar extends StatelessWidget {
   const StoriesListToolBar({
@@ -27,14 +28,14 @@ class StoriesListToolBar extends StatelessWidget {
                 color: DesignTheme.colors.main,
               ),
               Text(
-                "Москва",
+                TestData.selectedCity,
                 style: DesignTheme.text.toolbarCityLabel,
               ),
             ],
           ),
           TimeSelectorPanel(
             bloc: storiesListPageBloc,
-            titleList: ["07:12", "12:43", "15:29", "18:11", "19:53"],
+            titleList: TestData.timesList,
             mainColor: DesignTheme.colors.main,
             secondaryColor: DesignTheme.colors.darkBlue,
           ),
