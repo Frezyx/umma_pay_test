@@ -1,8 +1,10 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:umma_pay_test/blocs/stories_list_bloc.dart';
 import 'package:umma_pay_test/design/theme.dart';
 import 'package:umma_pay_test/models/story.dart';
+import 'package:umma_pay_test/utils/const/const.dart';
 import 'package:umma_pay_test/utils/enums.dart';
 import 'package:umma_pay_test/widgets/custom/seporator.dart';
 
@@ -37,28 +39,34 @@ class StoriesListItem extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
-            child: _buildTextColumn(),
+            child: _buildTextColumn(context),
           ),
         ],
       ),
     );
   }
 
-  Column _buildTextColumn() {
+  Column _buildTextColumn(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        Text(
-          story.title,
-          style: DesignTheme.text.storyListLabel,
+        SizedBox(
+          width: MediaQuery.of(context).size.width * 0.84,
+          child: AutoSizeText(
+            story.title,
+            style: DesignTheme.text.storyListLabel,
+            minFontSize: 15,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+          ),
         ),
         SizedBox(height: 4),
         Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              "Посмотреть",
+              Const.text.check,
               style: DesignTheme.text.storyListButton,
             ),
             Icon(
